@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Hello.TalkPage"
+             BackgroundColor="#F3B801">
+  <ScrollView>
+    <StackLayout Padding="20,0,20,20">
+      <!--Style comum-->
+      <Label Text="Infos - Palestra" TextColor="#FFFFFF" FontSize="20" FontAttributes="Bold" />
+      <!--Style comum-->
+      <StackLayout>
+        <Label Text="Título da apresentação" />
+        <Entry x:Name="titulo"/>
+      </StackLayout>
+      <StackLayout>
+        <Label Text="Resumo para o público" />
+        <Editor x:Name="resumo" />
+      </StackLayout>
+      <StackLayout>
+        <Label Text="Tempo de Palestra" />
+        <Entry x:Name="tempoPalestra" Placeholder="Em minutos"/>
+      </StackLayout>
+      <StackLayout>
+        <Label Text="Trilha" />
+        <Picker x:Name="Trilha" HorizontalOptions="FillAndExpand" Title="Selecione">
+          <Picker.Items>
+            <x:String>Mobile</x:String>
+            <x:String>IOT</x:String>
+            <x:String>Web</x:String>
+            <x:String>Startup</x:String>
+            <x:String>Outra</x:String>
+          </Picker.Items>
+        </Picker>
+      </StackLayout>
+      <Label Text="Nível" />
+      <Slider x:Name="slider" Maximum="100" Minimum="0" Margin="-15,0" >
+      </Slider>
+      <StackLayout Orientation="Horizontal" >
+        <Label HorizontalOptions="StartAndExpand" Text="Iniciante"/>
+        <Label HorizontalOptions="CenterAndExpand" Text="Intermediário"/>
+        <Label HorizontalOptions="EndAndExpand" Text="Avançado"/>
+      </StackLayout>
+      <!--Style comum-->
+      <Button Text="Salvar" Style="{StaticResource buttonStyle}"/>
+      <!--Style comum-->
+    </StackLayout>
+  </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Hello.MainPage">
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="blackButtonStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="Black"/>
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <StackLayout Padding="0,20,0,0">
+
+    <Image Source="xamarin_summit_logo.png"></Image>
+
+    <Button x:Name="btnPerson"
+           Clicked="OnPerson"
+           Text=" Palestrante "
+           HorizontalOptions="Center"
+           BorderWidth="3"
+           TextColor="White"
+           Margin="20"/>
+
+    <Button x:Name="btnTalk"
+       Clicked="OnTalk"
+       Text=" Palestra "
+       HorizontalOptions="Center"
+       BorderWidth="3"
+       Style="{DynamicResource dynamicStyle}"/>
+
+  </StackLayout>
+</ContentPage>
